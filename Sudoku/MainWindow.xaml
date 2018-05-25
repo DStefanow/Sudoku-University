@@ -7,6 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="800" Width="600">
     <DockPanel>
+        <DockPanel.Resources>
+            <Style x:Key="BlueButton" TargetType="{x:Type Button}">
+                <Setter Property="Background" Value="BLue"/>
+            </Style>
+        </DockPanel.Resources>
         <TextBlock Background="Red" DockPanel.Dock="Top" FontSize="36">
             Sudoku
         </TextBlock>
@@ -26,7 +31,7 @@
                         <ComboBoxItem IsSelected="True">9x9</ComboBoxItem>
                         <ComboBoxItem>16x16</ComboBoxItem>
                         <ComboBoxItem>25x25</ComboBoxItem>
-                        <ComboBoxItem>36x46</ComboBoxItem>
+                        <ComboBoxItem>36x36</ComboBoxItem>
                     </ComboBox>
                 </StackPanel>
             </Expander>
