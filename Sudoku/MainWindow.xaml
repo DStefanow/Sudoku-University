@@ -35,12 +35,14 @@
         </TextBlock>
         <StackPanel DockPanel.Dock="Left">
             <Expander IsExpanded="True" Header="Main Menu">
-                <StackPanel>
-                    <Button>New Game</Button>
-                    <Button>Load Game</Button>
-                    <Button>Save Game</Button>
-                    <Button>Quit</Button>
-                </StackPanel>
+                <Border Margin="5" Padding="10" Background="#77FFFFFF" BorderBrush="DimGray" BorderThickness="1">
+                    <StackPanel>
+                        <Button>New Game</Button>
+                        <Button>Load Game</Button>
+                        <Button>Save Game</Button>
+                        <Button>Quit</Button>
+                    </StackPanel>
+                </Border>
             </Expander>
             <Expander IsExpanded="True" Header="New Game Settings">
                 <StackPanel>
