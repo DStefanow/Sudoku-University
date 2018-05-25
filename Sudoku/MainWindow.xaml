@@ -40,7 +40,7 @@
                         <Button>New Game</Button>
                         <Button>Load Game</Button>
                         <Button>Save Game</Button>
-                        <Button>Quit</Button>
+                        <Button Click="QuitClicked">Quit</Button>
                     </StackPanel>
                 </Border>
             </Expander>

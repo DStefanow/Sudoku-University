@@ -15,14 +15,16 @@ using System.Windows.Shapes;
 
 namespace Sudoku
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void QuitClicked(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
