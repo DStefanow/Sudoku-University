@@ -5,40 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Sudoku"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="700">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="1*"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="1.2*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-        </Grid.RowDefinitions>
-        <FlowDocumentReader Grid.Column="0">
-            <FlowDocument>
-                <Table CellSpacing="5">
-                    <Table.Columns>
-                        <TableColumn />
-                        <TableColumn />
-                        <TableColumn />
-                        <TableColumn />
-                        <TableColumn />
-                        <TableColumn />
-                        <TableColumn />
-                        <TableColumn />
-                        <TableColumn />
-                    </Table.Columns>
-                    <TableRowGroup>
-                        <TableRow>
-                            <TableCell ColumnSpan="3">
-                                
-                            </TableCell>
-                        </TableRow>
-                    </TableRowGroup>
-                </Table>
-            </FlowDocument>
-        </FlowDocumentReader>
-    </Grid>
+        Title="MainWindow" Height="800" Width="600">
+    <DockPanel>
+        <TextBlock Background="Red" DockPanel.Dock="Top" FontSize="36">
+            Sudoku
+        </TextBlock>
+        <StackPanel DockPanel.Dock="Left">
+            <Expander IsExpanded="True" Header="Main Menu">
+                <StackPanel>
+                    <Button>New Game</Button>
+                    <Button>Load Game</Button>
+                    <Button>Save Game</Button>
+                    <Button>Quit</Button>
+                </StackPanel>
+            </Expander>
+            <Expander IsExpanded="True" Header="New Game Settings">
+                <StackPanel>
+                    <TextBlock>Board Size:</TextBlock>
+                    <ComboBox IsEditable="False">
+                        <ComboBoxItem IsSelected="True">9x9</ComboBoxItem>
+                        <ComboBoxItem>16x16</ComboBoxItem>
+                        <ComboBoxItem>25x25</ComboBoxItem>
+                        <ComboBoxItem>36x46</ComboBoxItem>
+                    </ComboBox>
+                </StackPanel>
+            </Expander>
+        </StackPanel>
+        <StackPanel Background="Blue" DockPanel.Dock="Right">
+            <Button>B</Button>
+        </StackPanel>
+        <ListBox Background="Gray" DockPanel.Dock="Bottom"/>
+        <StackPanel Background="Yellow"/>
+    </DockPanel>
 </Window>
