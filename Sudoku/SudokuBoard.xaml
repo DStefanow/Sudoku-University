@@ -8,27 +8,35 @@
     Foreground="White"
     Width="{Binding RelativeSource={RelativeSource Self}, Path=ActualHeight}">
     <UserControl.Resources>
-        <DataTemplate x:Key ="OuterRowTemplate">
-            <ItemsControl ItemsSource ="{Binding}">
+        <DataTemplate x:Key ="CellTemplate">
+            <Border x:Name ="Border" BorderBrush ="DimGray" BorderThickness ="1">
+                <TextBlock HorizontalAlignment ="Center" VerticalAlignment ="Center" FontWeight ="Bold"
+                           FontSize ="16" Text ="{Binding Path=Value}"/>
+            </Border>
+        </DataTemplate>
+        <DataTemplate x:Key="InnerGridTemplate">
+            <ItemsControl ItemsSource="{Binding}" ItemTemplate="{StaticResource CellTemplate}">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
-                        <UniformGrid Rows ="1"/>
+                        <UniformGrid Rows ="1" Background="Green"/>
                     </ItemsPanelTemplate>
                 </ItemsControl.ItemsPanel>
             </ItemsControl>
         </DataTemplate>
-        <DataTemplate x:Key ="CellTemplate">
-            <Border x:Name ="Border" BorderBrush ="DimGray" BorderThickness ="1">
-                <TextBlock HorizontalAlignment ="Center" VerticalAlignment ="Center" 
-	     FontWeight ="Bold" FontSize ="16" Text ="{Binding Path=Value}"/>
-            </Border>
+        <DataTemplate x:Key ="OuterRowTemplate">
+            <ItemsControl ItemsSource ="{Binding}" ItemTemplate ="{StaticResource InnerGridTemplate}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <UniformGrid Rows ="1" Background="Black"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
         </DataTemplate>
     </UserControl.Resources>
-    <ItemsControl ItemTemplate="{StaticResource OuterRowTemplate}"
-                  ItemsSource="{Binding Path=GridRows}" x:Name="MainList">
+    <ItemsControl  ItemTemplate ="{StaticResource OuterRowTemplate}" ItemsSource ="{Binding Path=GridRows}" x:Name ="MainList">
         <ItemsControl.ItemsPanel>
             <ItemsPanelTemplate>
-                <UniformGrid Columns="1" />
+                <UniformGrid Columns ="1"/>
             </ItemsPanelTemplate>
         </ItemsControl.ItemsPanel>
     </ItemsControl>
