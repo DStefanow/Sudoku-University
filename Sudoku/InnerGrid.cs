@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 
 
@@ -21,6 +22,20 @@ namespace Sudoku
         public bool IsValid
         {
             get { return isValidValue; }
+        }
+
+        public Cell this[int row, int col]
+        {
+            get
+            {
+                if (row < 0 || row >= Rows.Count)
+                    throw new ArgumentOutOfRangeException("row", row, "Invalid Row Index");
+
+                if (col < 0 || col > Rows.Count)
+                    throw new ArgumentOutOfRangeException("col", col, "Invald Column Index");
+
+                return Rows[row][col];
+            }
         }
 
         public InnerGrid(int size)
