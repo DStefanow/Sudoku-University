@@ -60,6 +60,6 @@
             <Button>B</Button>
         </StackPanel>
         <ListBox Background="Gray" DockPanel.Dock="Bottom"/>
-        <StackPanel Background="Yellow"/>
+        <local:SudokuBoard HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5"/>
     </DockPanel>
 </Window>
