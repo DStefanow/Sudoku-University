@@ -15,14 +15,14 @@ using System.Windows.Shapes;
 
 namespace Sudoku
 {
-    /// <summary>
-    /// Interaction logic for SudokuBoard.xaml
-    /// </summary>
     public partial class SudokuBoard : UserControl
     {
+        public Board GameBoard = new Board(9);
+
         public SudokuBoard()
         {
             InitializeComponent();
+            MainList.DataContext = GameBoard;
         }
     }
 }

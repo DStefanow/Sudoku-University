@@ -5,7 +5,8 @@
     HorizontalContentAlignment="Stretch"
     VerticalAlignment="Stretch"
     VerticalContentAlignment="Stretch"
-    Foreground="White">
+    Foreground="White"
+    Width="{Binding RelativeSource={RelativeSource Self}, Path=ActualHeight}">
     <UserControl.Resources>
         <DataTemplate x:Key ="OuterRowTemplate">
             <ItemsControl ItemsSource ="{Binding}">
