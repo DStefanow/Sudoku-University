@@ -22,6 +22,17 @@ namespace Sudoku
         public bool IsValid
         {
             get { return isValidValue; }
+            set
+            {
+                if (isValidValue != value)
+                {
+                    isValidValue = value;
+                    if (PropertyChanged != null)
+                    {
+                        PropertyChanged(this, new PropertyChangedEventArgs("IsValid"));
+                    }
+                }
+            }
         }
 
         public Cell this[int row, int col]
@@ -48,7 +59,6 @@ namespace Sudoku
                 for (int j = 0; j < size; j++)
                 {
                     Cell cell = new Cell();
-                    // TODO: Check this shit
                     cell.PropertyChanged += new PropertyChangedEventHandler(cellPropertyChanged);
                     collumn.Add(cell);
                 }
