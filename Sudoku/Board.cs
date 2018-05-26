@@ -5,7 +5,7 @@ using System.ComponentModel;
 
 namespace Sudoku
 {
-    class Board : INotifyPropertyChanged
+    public class Board : INotifyPropertyChanged
     {
         // Implemented from interface
         public event PropertyChangedEventHandler PropertyChanged;

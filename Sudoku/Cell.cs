@@ -2,7 +2,7 @@
 
 namespace Sudoku
 {
-    class Cell : INotifyPropertyChanged
+    public class Cell : INotifyPropertyChanged
     {
         // Implemented from interface
         public event PropertyChangedEventHandler PropertyChanged;

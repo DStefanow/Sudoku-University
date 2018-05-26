@@ -5,7 +5,7 @@ using System.ComponentModel;
 
 namespace Sudoku
 {
-    class InnerGrid : INotifyPropertyChanged
+    public class InnerGrid : INotifyPropertyChanged
     {
         // Implemented from interface
         public event PropertyChangedEventHandler PropertyChanged;
