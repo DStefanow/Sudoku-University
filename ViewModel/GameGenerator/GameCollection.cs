@@ -1,14 +1,4 @@
-﻿//
-// Copyright (c) 2014 Han Hung
-// 
-// This program is free software; it is distributed under the terms
-// of the GNU General Public License v3 as published by the Free
-// Software Foundation.
-//
-// http://www.gnu.org/licenses/gpl-3.0.html
-// 
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading;
@@ -103,8 +93,7 @@ namespace SudokuWPF.ViewModel.GameGenerator
                 }
                 catch (Exception)
                 {
-                    // TODO: What to do here?
-                    // Maybe log the error in the Application.Event log?
+
                 }
                 return null;                                            // Error ... just return null.
             }
@@ -175,8 +164,7 @@ namespace SudokuWPF.ViewModel.GameGenerator
             }
             catch (Exception)
             {
-                // TODO: What to do here?
-                // Maybe log error into Application.Event log?
+
             }
             return null;                                                    // Error somewhere, just return a null string
         }
