@@ -331,10 +331,6 @@
                 Style="{StaticResource EnableGameButtonStyle}"
                 Margin="430,190,0,0"
                 Click="btnReset_Click"/>
-        <Button Content="About Sudoku WPF"
-                Style="{StaticResource ButtonBaseStyle}"
-                Margin="430,376,0,0" 
-                Click="btnAbout_Click"/>
         <Button Content="Close" 
                 Style="{StaticResource ButtonBaseStyle}"
                 Margin="430,411,0,0" 

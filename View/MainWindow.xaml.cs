@@ -1,14 +1,4 @@
-﻿//
-// Copyright (c) 2014 Han Hung
-// 
-// This program is free software; it is distributed under the terms
-// of the GNU General Public License v3 as published by the Free
-// Software Foundation.
-//
-// http://www.gnu.org/licenses/gpl-3.0.html
-// 
-
-using System;
+﻿using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -92,12 +82,6 @@ namespace SudokuWPF.View
         {
             if (ViewModel != null)
                 ViewModel.ResetClicked();
-        }
-
-        private void btnAbout_Click(object sender, RoutedEventArgs e)
-        {
-            if (ViewModel != null)
-                ViewModel.AboutClicked();
         }
 
         private void btnPrint_Click(object sender, RoutedEventArgs e)
@@ -628,24 +612,6 @@ namespace SudokuWPF.View
             finally
             {
                 inputPad = null;                                        // Release the window pointer
-            }
-        }
-
-        /// <summary>
-        /// Launch the About box dialog.
-        /// </summary>
-        internal void ShowAboutBox()
-        {
-            AboutBox aboutBox;
-            try
-            {
-                aboutBox = new AboutBox();                          // Instantiate a new instance of the window
-                aboutBox.Owner = this;                              // Set the owner to this window
-                aboutBox.ShowDialog();                              // Display the dialog
-            }
-            finally
-            {
-                aboutBox = null;                                    // Release the window pointer
             }
         }
 

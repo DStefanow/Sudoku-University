@@ -76,10 +76,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="View\AboutBox.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="View\GameComplete.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -121,9 +117,6 @@
     <Compile Include="ViewModel\GameTimer.cs" />
     <Compile Include="ViewModel\GameGenerator\Solver\SudokuArena.cs" />
     <Compile Include="ViewModel\ViewModel.cs" />
-    <Compile Include="View\AboutBox.xaml.cs">
-      <DependentUpon>AboutBox.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\GameComplete.xaml.cs">
       <DependentUpon>GameComplete.xaml</DependentUpon>
     </Compile>

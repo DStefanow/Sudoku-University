@@ -1094,15 +1094,7 @@ namespace SudokuWPF.ViewModel
         {
             ResetGame();
         }
-
-        /// <summary>
-        /// Process the About button click.
-        /// </summary>
-        internal void AboutClicked()
-        {
-            ShowAboutBox();
-        }
-
+        
         /// <summary>
         /// Process the Print button click.
         /// </summary>
@@ -1322,11 +1314,6 @@ namespace SudokuWPF.ViewModel
                 _model.ResetPuzzle();                               // Reset the puzzle
                 UpdateEmptyCount();                                 // Update the empty count status
             }
-        }
-
-        private void ShowAboutBox()
-        {
-            _view.ShowAboutBox();                                   // Show the About box dialog
         }
 
         private void ProcessCellClick(Int32 col, Int32 row)
