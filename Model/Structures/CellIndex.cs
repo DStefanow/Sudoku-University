@@ -1,15 +1,4 @@
-﻿//
-// Copyright (c) 2014 Han Hung
-//
-// This program is free software.  It is distributed under the terms of
-// the GNU General Public License v3 as published by the Free Software
-// Foundation.
-//
-// http://www.gnu.org/licenses/gpl-3.0.html
-//
-
-using System;
-
+﻿using System;
 using SudokuWPF.ViewModel;
 
 namespace SudokuWPF.Model.Structures
@@ -25,9 +14,9 @@ namespace SudokuWPF.Model.Structures
         /// <param name="row">Row value to initialize the instance with.  Valid input is from 0 through 8.</param>
         internal CellIndex(Int32 col, Int32 row)
         {
-            if (Common.IsValidIndex(col, row))          // Check if this input parameters are valid.
+            if (Common.IsValidIndex(col, row))
             {
-                Column = col;                           // Yes they are, so save them.
+                Column = col;
                 Row = row;
                 Region = SetRegion(col, row);           // Compute the region based on the column and row.
             }
